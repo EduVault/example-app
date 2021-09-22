@@ -1,2 +1,3 @@
-# example-app
-An example app using the eduvault sdk
+# mvp-frontend
+
+A demo app for using EduVault for user authentication and cloud data storage.

@@ -1,0 +1,23 @@
+FROM node:12 AS build-stage
+
+WORKDIR /example
+COPY package.json ./
+COPY yarn.lock ./
+# RUN yarn config set registry 'https://registry.npm.taobao.org'
+# RUN yarn config set registry 'https://registry.npmjs.org/'
+
+RUN yarn install 
+COPY . .
+FROM build-stage AS prod-build
+WORKDIR /example
+ARG PROD_HOST='localhost'
+ARG TEST=0
+ENV VUE_APP_TEST=$TEST
+ENV VUE_APP_PROD_HOST=$PROD_HOST
+ENV NODE_ENV=production
+RUN yarn build
+
+FROM nginx as prod-stage
+RUN mkdir /example
+COPY --from=prod-build /example/dist /app
+COPY nginx.conf /etc/nginx/nginx.conf
