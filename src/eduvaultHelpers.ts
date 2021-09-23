@@ -1,6 +1,6 @@
 import { Deck } from './types';
 import defaultDeck from './assets/defaultDeck.json';
-import EduVault from '@eduvault/eduvault-js/dist/main';
+import EduVault from '@eduvault/sdk-js/dist/main';
 /** This will not be needed in a real app, as the developer just needs to register their app one time */
 export async function setupApp() {
   const defaultAppId = '123';

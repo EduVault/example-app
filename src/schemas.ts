@@ -1,4 +1,4 @@
-import { Database, JSONSchema } from '@eduvault/eduvault-js';
+import { Database, JSONSchema } from '@eduvault/sdk-js';
 
 export const cardSchema = {
   $schema: 'http://json-schema.org/draft-07/schema#',

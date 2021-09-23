@@ -1,4 +1,4 @@
-import EduVault, { Buckets, Database, JSONSchema, CollectionConfig } from '@eduvault/eduvault-js';
+import EduVault, { Buckets, Database, JSONSchema, CollectionConfig } from '@eduvault/sdk-js';
 
 /** @param username will be an email for local scheme, for google and facebook will be email if available or id if not */
 export interface Person {

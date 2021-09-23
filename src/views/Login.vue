@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import EduVault from '@eduvault/eduvault-js/dist/main';
+import EduVault from '@eduvault/sdk-js/dist/main';
 import { setupApp } from '../eduvaultHelpers';
 import { reactive, onMounted } from '@vue/composition-api';
 import { BImg } from 'bootstrap-vue';
